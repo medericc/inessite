@@ -101,7 +101,7 @@ export default function HomePage() {
          <div className="relative z-0">
   <div className="relative w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
     <Image
-      src="/ines-debroise_portrait.webp"
+      src="/ines-debroise-portrait.webp"
       alt="Inès Debroise, praticienne en cupping therapy et massage sportif à Geispolsheim"
       fill
       priority
