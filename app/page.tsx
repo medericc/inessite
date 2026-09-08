@@ -9,12 +9,12 @@ type Review = {
 };
 // Exemple d'avis (vide pour l'instant – remplissez-le pour afficher la section)
 const reviews: Review[] = [
-  {
-    author: "Marie L.",
-    rating: 5,
-    text: "Séance de cupping incroyable ! Je me sens légère et détendue. Inès est très professionnelle et à l'écoute.",
-    date: "2026-09-15",
-  },
+  // {
+  //   author: "Marie L.",
+  //   rating: 5,
+  //   text: "Séance de cupping incroyable ! Je me sens légère et détendue. Inès est très professionnelle et à l'écoute.",
+  //   date: "2026-09-15",
+  // },
   // {
   //   author: "Thomas R.",
   //   rating: 4,
@@ -68,9 +68,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
          <div className="relative z-10">
             <p className="text-[#8C6D58] uppercase tracking-widest text-sm mb-4">Bien-être & Récupération</p>
-            <h1 className="font-serif text-5xl lg:text-6xl font-bold leading-tight text-[#5C3D2E]">
-              Inès Debroise
-              <span className="block text-[#8C6D58]">ID RECOVERY</span>
+            <h1 className="font-serif text-3xl lg:text-4xl font-bold leading-tight text-[#5C3D2E]">
+              Cupping & Massage Sportif
+              <span className="block text-[#8C6D58]">à Geispolsheim près de Strasbourg</span>
             </h1>
             <p className="mt-6 text-lg text-[#684735] max-w-xl">
               Praticienne certifiée en récupération physique et bien-être. Cupping therapy (hijama), massage suédois sportif et soins personnalisés à Geispolsheim.
@@ -152,10 +152,10 @@ export default function HomePage() {
       {/* Section Prestations */}
       <section id="prestations" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Mes Prestations</h2>
+          <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Ses Prestations</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Cupping */}
-            <div className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
+            <article  className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
               <div className="text-4xl mb-4">🌿</div>
               <h3 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">Cupping Therapy / Hijama</h3>
               <p className="text-[#684735] mb-6">
@@ -166,9 +166,9 @@ export default function HomePage() {
                 <li className="flex justify-between"><span>Jambes complètes (40 min)</span><strong>55 €</strong></li>
                 <li className="flex justify-between"><span>Corps entier (45 min)</span><strong>80 €</strong></li>
               </ul>
-            </div>
+            </article >
             {/* Massage */}
-            <div className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
+            <article  className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
               <div className="text-4xl mb-4">💆‍♀️</div>
               <h3 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">Massage Suédois Sportif</h3>
               <p className="text-[#684735] mb-6">
@@ -180,9 +180,9 @@ export default function HomePage() {
                 <li className="flex justify-between"><span>Dos (30 min)</span><strong>45 €</strong></li>
                 <li className="flex justify-between"><span>Jambes (40 min)</span><strong>50 €</strong></li>
               </ul>
-            </div>
+            </article >
             {/* Formules combinées */}
-            <div className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
+            <article  className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
               <div className="text-4xl mb-4">✨</div>
               <h3 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">Formules Combinées</h3>
               <p className="text-[#684735] mb-6">
@@ -194,7 +194,7 @@ export default function HomePage() {
                 <li className="flex justify-between"><span>Signature Bien-être (90 min)</span><strong>120 €</strong></li>
                 <li className="flex justify-between"><span>Soin Personnalisé (60-90 min)</span><strong>80–150 €</strong></li>
               </ul>
-            </div>
+            </article >
           </div>
 
 
@@ -336,7 +336,7 @@ export default function HomePage() {
   <section id="avis" className="bg-[#EDE4D8] py-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">
-        Avis de mes clients
+        Avis de ses clients
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -401,42 +401,42 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Questions Fréquentes</h2>
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="font-semibold text-[#5C3D2E] mb-2">Est-ce que le Cupping est douloureux ?</h3>
+            <details  className="bg-white rounded-2xl p-6 shadow">
+              <summary className="font-semibold text-[#5C3D2E] mb-2">Est-ce que le Cupping est douloureux ?</summary>
               <p className="text-[#684735]">
                 Non, la plupart des personnes ressentent une légère sensation de succion et de pression. Le soin est généralement bien toléré et s&apos;adapte à votre sensibilité.
               </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="font-semibold text-[#5C3D2E] mb-2">Quelle est la durée d&apos;une séance de cupping ?</h3>
+            </details>
+            <details className="bg-white rounded-2xl p-6 shadow">
+              <summary  className="font-semibold text-[#5C3D2E] mb-2">Quelle est la durée d&apos;une séance de cupping ?</summary>
               <p className="text-[#684735]">
                 Dos : environ 20 minutes. Corps complet : environ 40 minutes. Les durées sont indicatives et peuvent varier.
               </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="font-semibold text-[#5C3D2E] mb-2">À quelle fréquence faire du Cupping ?</h3>
+            </details>
+            <details className="bg-white rounded-2xl p-6 shadow">
+              <summary  className="font-semibold text-[#5C3D2E] mb-2">À quelle fréquence faire du Cupping ?</summary>
               <p className="text-[#684735]">
                 Bien-être : toutes les 4 à 8 semaines. Sport & récupération : toutes les semaines selon besoins. Entretien saisonnier : 1 séance à chaque changement de saison. Nous définirons ensemble le rythme adapté.
               </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="font-semibold text-[#5C3D2E] mb-2">Puis-je faire du Cupping si j&apos;ai un tatouage ou une cicatrice ?</h3>
+            </details>
+            <details className="bg-white rounded-2xl p-6 shadow">
+              <summary  className="font-semibold text-[#5C3D2E] mb-2">Puis-je faire du Cupping si j&apos;ai un tatouage ou une cicatrice ?</summary>
               <p className="text-[#684735]">
                 Oui, avec précautions. Tatouage de moins d&apos;un an : zone contournée. Tatouage de plus d&apos;un an : possible si peau cicatrisée. Cicatrice récente : évitée jusqu&apos;à guérison. Chaque séance est adaptée.
               </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="font-semibold text-[#5C3D2E] mb-2">Le massage sportif fait-il mal ?</h3>
+            </details>
+            <details className="bg-white rounded-2xl p-6 shadow">
+              <summary  className="font-semibold text-[#5C3D2E] mb-2">Le massage sportif fait-il mal ?</summary>
               <p className="text-[#684735]">
                 Non, il n&apos;a pas besoin d&apos;être douloureux. L&apos;intensité doit être adaptée à votre corps et à vos objectifs.
               </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h3 className="font-semibold text-[#5C3D2E] mb-2">Le massage sportif remplace-t-il un kinésithérapeute ou un médecin ?</h3>
+            </details>
+            <details className="bg-white rounded-2xl p-6 shadow">
+              <summary  className="font-semibold text-[#5C3D2E] mb-2">Le massage sportif remplace-t-il un kinésithérapeute ou un médecin ?</summary>
               <p className="text-[#684735]">
                 Non. Le massage sportif est une prestation de bien-être et de récupération. Il ne remplace pas un diagnostic ou un traitement médical.
               </p>
-            </div>
+            </details>
           </div>
         </div>
       </section>
