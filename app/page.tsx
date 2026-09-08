@@ -487,17 +487,47 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#5C3D2E] text-[#F5EFE6] py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-serif text-xl mb-2">ID RECOVERY – Inès Debroise</p>
-          <p className="text-sm opacity-80">
-            Prestations de bien-être et de récupération sportive non médicales, ne remplaçant pas un suivi en kinésithérapie.
-          </p>
-          <p className="text-sm mt-4 opacity-60">
-            © {new Date().getFullYear()} ID RECOVERY. Tous droits réservés.
-          </p>
-        </div>
-      </footer>
+    <footer className="bg-[#5C3D2E] text-[#F5EFE6] py-10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p className="font-serif text-xl mb-2">ID RECOVERY – Inès Debroise</p>
+
+    <p className="text-sm opacity-80">
+      Prestations de bien-être et de récupération sportive non médicales, ne
+      remplaçant pas un suivi en kinésithérapie.
+    </p>
+
+    {/* Liens légaux */}
+    <div className="flex justify-center items-center gap-3 mt-4 text-sm">
+      <a
+        href="/politique-de-confidentialite"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+      >
+        Politique de confidentialité
+      </a>
+
+      <span className="opacity-30">•</span>
+
+      <a
+        href="/mentions-legales"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+      >
+        Mentions légales
+      </a>
+        <span className="opacity-30">•</span>
+
+      <a
+        href="/gestion-cookies"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+      >
+        Gestion des Cookies
+      </a>
+    </div>
+
+    <p className="text-sm mt-4 opacity-60">
+      © {new Date().getFullYear()} ID RECOVERY. Tous droits réservés.
+    </p>
+  </div>
+</footer>
 
 
 
