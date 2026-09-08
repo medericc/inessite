@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://exemple-topique-ines.vercel.app/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'ID RECOVERY – Cupping et massage sportif à Geispolsheim',
@@ -64,7 +64,7 @@ twitter: {
   title: "ID RECOVERY | Cupping & Massage Sportif à Geispolsheim",
   description:
     "Cupping therapy et massage sportif à Geispolsheim, près de Strasbourg.",
-  images: ["https://exemple-topique-ines.vercel.app/og-image.jpg"],
+  images: ["/og-image.jpg"],
 },
   robots: {
     index: true,
