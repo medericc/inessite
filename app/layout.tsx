@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 
 // Métadonnées SEO
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.idrecovery.fr'),
+  metadataBase: new URL('https://exemple-topique-ines.vercel.app'),
 
   title: {
     default: 'ID RECOVERY | Cupping & Massage Sportif à Geispolsheim',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'ID RECOVERY | Cupping & Massage Sportif à Geispolsheim',
     description:
       'Cupping therapy, massage suédois sportif et récupération physique à Geispolsheim, près de Strasbourg.',
-    url: 'https://www.idrecovery.fr/',
+    url: 'https://exemple-topique-ines.vercel.app/',
     siteName: 'ID RECOVERY',
     locale: 'fr_FR',
     type: 'website',
@@ -82,14 +82,14 @@ twitter: {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://www.idrecovery.fr/#business',
+  '@id': 'https://exemple-topique-ines.vercel.app/#business',
   name: 'ID RECOVERY – Inès Debroise',
-  url: 'https://www.idrecovery.fr/',
+  url: 'https://exemple-topique-ines.vercel.app/',
   description:
     'Cupping therapy et massage sportif à Geispolsheim, près de Strasbourg.',
-  telephone: '+33XXXXXXXXX',
-  image: "https://www.idrecovery.fr/ines-debroise-portrait.jpg",
-logo: "https://www.idrecovery.fr/logo-idrecovery.webp",
+  telephone: '+33611872467',
+  image: "https://exemple-topique-ines.vercel.app/ines-debroise-cupping.wbep",
+logo: "https://exemple-topique-ines.vercel.app/logo_idrecovery.webp",
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Geispolsheim',
