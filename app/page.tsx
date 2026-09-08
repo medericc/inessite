@@ -137,7 +137,7 @@ export default function HomePage() {
           </div>
           <div className="order-1 lg:order-2">
             {/* Image à propos - remplacez src */}
-       <div className="relative w-full h-[400px] rounded-[2rem] overflow-hidden shadow-xl">
+   <div className="hidden md:block relative w-full h-[400px] rounded-[2rem] overflow-hidden shadow-xl">
   <Image
     src="/ines-debroise-cupping.webp"
     alt="Séance de cupping therapy par Inès Debroise"
