@@ -159,7 +159,37 @@ export default function ReviewModal() {
                     className="w-full px-4 py-2 rounded-2xl border border-[#D8C3A5] bg-white focus:outline-none focus:ring-2 focus:ring-[#8C6D58]"
                     placeholder="Partagez votre expérience..."
                   />
-                </div>
+                  <p className="text-xs text-[#684735]">
+  Les informations renseignées sont utilisées uniquement pour traiter votre avis
+  et, après validation, pour éventuellement le publier sur ce site.
+  Pour en savoir plus sur vos droits et la gestion de vos données, consultez notre{" "}
+  <a
+    href="/politique-confidentialite"
+    className="underline hover:text-[#8C6D58]"
+  >
+    politique de confidentialité
+  </a>.
+</p>
+<p className="text-xs text-[#684735]">
+  Merci de ne pas communiquer d’informations médicales ou de santé dans votre avis.
+</p>
+<div className="flex items-start gap-3 mt-4">
+  <input
+    type="checkbox"
+    id="review-consent"
+    name="publication_consent"
+    value="yes"
+    required
+    className="mt-1 h-4 w-4 shrink-0 accent-[#5C3D2E] cursor-pointer"
+  />
+
+  <label
+    htmlFor="review-consent"
+    className="text-sm text-[#684735] cursor-pointer"
+  >
+    J&apos;accepte que mon avis soit publié sur le site ID RECOVERY.
+  </label>
+</div>            </div>
 
                 {formStatus === "error" && (
                   <p className="text-red-600 text-sm">

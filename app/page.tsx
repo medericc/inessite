@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import ReviewModal from './components/ReviewModal';
-
+import GoogleMapConsent from "./components/GoogleMapConsent";
 type Review = {
   author: string;
   rating: number; // 1 à 5
@@ -92,9 +92,10 @@ export default function HomePage() {
             {/* Offre de lancement */}
             <div className="mt-8 bg-[#F5EFE6] border border-[#8C6D58] rounded-2xl p-5 inline-block">
               <p className="font-semibold text-[#5C3D2E]">🎉 Offre de lancement</p>
-              <p className="text-sm text-[#684735]">
-                -15% sur toutes les prestations du 5 septembre au 5 octobre 2026. Réservation en message privé.
-              </p>
+              <p className="text-sm text-[#684735] mt-1">
+                Profitez de <strong>-15% sur toutes les prestations</strong> du 5 septembre au 5 octobre 2026.
+                 Réservation en message privé.
+               </p>
             </div>
           </div>
          <div className="relative z-0">
@@ -455,12 +456,10 @@ export default function HomePage() {
             <p className="text-[#684735] mb-4">
               Langues parlées : 🇫🇷 Français & 🇬🇧 Anglais
             </p>
-            <div className="bg-[#F5EFE6] border border-[#8C6D58] rounded-2xl p-6 mt-8">
+            <div className="bg-[#F5EFE6] border border-[#8C6D58] rounded-xl p-6 mt-8">
               <p className="font-semibold text-[#5C3D2E]">🎉 Offre de lancement</p>
               <p className="text-[#684735] mt-2">
-                Profitez de <strong>-15% sur toutes les prestations</strong> du 5 septembre au 5 octobre 2026.
-                <br />
-                Réservation en message privé (Instagram, Facebook ou formulaire de contact).
+              Réservation en message privé (par Instagram ou par mail).
               </p>
             </div>
             <div className="mt-8 flex gap-4">
@@ -482,17 +481,7 @@ export default function HomePage() {
           </div>
           <div>
             {/* Carte ou image du lieu - remplacez par une carte Google Maps ou photo */}
-            <div className="w-full h-[400px] rounded-[2rem] overflow-hidden shadow-xl bg-[#F5EFE6]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2636.123456789!2d7.680000!3d48.520000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDMxJzEyLjAiTiA3wrA0MCc0OC4wIkU!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                title="Carte Geispolsheim"
-              />
-            </div>
+          <GoogleMapConsent />
           </div>
         </div>
       </section>

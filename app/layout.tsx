@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Playfair_Display, Montserrat } from 'next/font/google';
-
+import CookieManager from "./components/CookieManager";
 // Polices
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -126,7 +126,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     __html: JSON.stringify(jsonLd),
   }}
 />
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children} <CookieManager /></body>
     </html>
   );
 }
