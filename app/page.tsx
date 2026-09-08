@@ -465,7 +465,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 flex gap-4">
               <a
-                href="https://www.instagram.com/ines_dbrs"
+                href="https://www.instagram.com/idrecovery__"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#5C3D2E] text-[#F5EFE6] px-6 py-3 rounded-full hover:bg-[#8C6D58] transition"
@@ -473,7 +473,7 @@ export default function HomePage() {
                 Instagram
               </a>
               <a
-                href="mailto:contact@idrecovery.fr"
+                href="mailto:inesdbrs@gmail.com"
                 className="border-2 border-[#5C3D2E] text-[#5C3D2E] px-6 py-3 rounded-full hover:bg-[#5C3D2E] hover:text-[#F5EFE6] transition"
               >
                 Email

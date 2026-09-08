@@ -88,7 +88,7 @@ const jsonLd = {
   description:
     'Cupping therapy et massage sportif à Geispolsheim, près de Strasbourg.',
   telephone: '+33611872467',
-  image: "https://exemple-topique-ines.vercel.app/ines-debroise-cupping.wbep",
+  image: "https://exemple-topique-ines.vercel.app/ines-debroise-cupping.webp",
 logo: "https://exemple-topique-ines.vercel.app/logo_idrecovery.webp",
   address: {
     '@type': 'PostalAddress',
