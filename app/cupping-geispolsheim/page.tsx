@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -103,7 +104,7 @@ const benefits = [
   "Soulage les tensions musculaires",
   "Favorise la détente et la relaxation",
   "Peut contribuer à une meilleure circulation locale",
-  "Apprécié par de nombreux sportifs pour accompagner la récupération",
+  "Accompagne la récupération des sportifs",
   "Procure une sensation de légèreté et de bien-être",
 ];
 
@@ -116,6 +117,8 @@ const contraindications = [
   "Porteur d'une greffe de rein",
   "Certaines pathologies cardiaques",
   "Enfants de moins de 8 ans",
+   "Interdiction médicale",
+  "Pathologie particulière",
 ];
 
 const situations = [
@@ -124,7 +127,7 @@ const situations = [
   "Jambes lourdes",
   "Récupération après l'effort sportif",
   "Stress et tensions du quotidien",
-  "Sensation de fatigue physique",
+
   "Besoin de détente et recherche de bien-être",
 ];
 
@@ -133,7 +136,7 @@ const publicCible = [
   "Personnes stressées ou fatiguées",
   "Travailleurs de bureau et télétravailleurs",
   "Personnes souffrant de tensions musculaires",
-  "Personnes recherchant un moment de détente et de bien-être",
+  "Personnes recherchant un moment de détente",
 ];
 
 const techniques = [
@@ -147,7 +150,7 @@ const techniques = [
   },
   {
     title: "Cupping sec",
-    text: "Ventouses posées de 5 à 15 minutes pour favoriser la détente musculaire.",
+    text: "Ventouses posées de 5 à 15 minutes.",
   },
 ];
 
@@ -183,45 +186,67 @@ export default function CuppingPage() {
   return (
     <main className="bg-[#f6f0e7] text-[#5b3b2e]">
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 pb-20 pt-16 md:px-12 md:pb-28 md:pt-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="max-w-3xl">
-            <p className="mb-5 font-montserrat text-sm font-semibold uppercase tracking-[0.18em] text-[#9a725c]">
-              ID RECOVERY · Geispolsheim
-            </p>
+     {/* HERO */}
+<section className="relative overflow-hidden px-6 pb-20 pt-16 md:px-12 md:pb-28 md:pt-24">
+  <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+    
+    {/* TEXTE */}
+    <div className="relative z-10 max-w-3xl">
+      <p className="mb-5 font-montserrat text-sm font-semibold uppercase tracking-[0.18em] text-[#9a725c]">
+        ID RECOVERY · Geispolsheim
+      </p>
 
-            <h1 className="font-playfair text-4xl font-bold leading-tight md:text-6xl">
-              Cupping à Geispolsheim
-              <span className="block text-[#8b604b]">
-                près de Strasbourg
-              </span>
-            </h1>
+    <h1 className="font-playfair text-4xl font-bold leading-tight md:text-6xl">
+  Cupping à Geispolsheim
+  <span className="block text-[#8b604b]">
+    près de Strasbourg
+  </span>
+</h1>
 
-            <p className="mt-7 max-w-2xl font-montserrat text-base leading-8 text-[#76564a] md:text-lg">
-              Découvrez le cupping, une pratique appréciée pour accompagner
-              la détente, le relâchement des tensions et la récupération
-              physique. Les séances sont personnalisées selon vos besoins et
-              votre sensibilité.
-            </p>
+<p className="mt-7 max-w-2xl font-montserrat text-base leading-8 text-[#76564a] md:text-lg">
+  Découvrez le cupping, une pratique appréciée pour accompagner
+  la détente, le relâchement des tensions et la récupération
+  physique. Les séances sont personnalisées selon vos besoins et
+  votre sensibilité.
+</p>
 
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Link
-                href="/#contact"
-                className="rounded-full bg-[#5b3b2e] px-7 py-3.5 font-montserrat text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#704a39]"
-              >
-                Prendre rendez-vous
-              </Link>
+      <div className="mt-9 flex flex-wrap gap-4">
+        <Link
+          href="/#contact"
+          className="rounded-full bg-[#5b3b2e] px-7 py-3.5 font-montserrat text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#704a39]"
+        >
+          Prendre rendez-vous
+        </Link>
 
-              <Link
-                href="/"
-                className="rounded-full border border-[#cdb995] bg-transparent px-7 py-3.5 font-montserrat text-sm font-semibold text-[#5b3b2e] transition-all duration-300 hover:bg-[#e8dcc8]"
-              >
-                Retour à l&apos;accueil
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+        <Link
+          href="/"
+          className="rounded-full border border-[#cdb995] bg-transparent px-7 py-3.5 font-montserrat text-sm font-semibold text-[#5b3b2e] transition-all duration-300 hover:bg-[#e8dcc8]"
+        >
+          Retour à l&apos;accueil
+        </Link>
+      </div>
+    </div>
+
+    {/* PHOTO */}
+    <div className="relative z-0">
+      <div className="relative h-[420px] w-full overflow-hidden rounded-[3rem] shadow-2xl md:h-[500px]">
+        <Image
+          src="/ines-debroise-portrait.webp"
+          alt="Inès Debroise, praticienne en massage sportif à Geispolsheim près de Strasbourg"
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-top"
+        />
+      </div>
+
+      {/* Éléments décoratifs */}
+      <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-[#8C6D58] opacity-20" />
+      <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-[#D2BBA0] opacity-30" />
+    </div>
+
+  </div>
+</section>
 
       {/* POURQUOI FAIRE DU CUPPING */}
       <section className="bg-[#dcc6a3] px-6 py-20 md:px-12 md:py-24">
@@ -239,12 +264,13 @@ export default function CuppingPage() {
 
             <div className="font-montserrat leading-8 text-[#6d4c3d]">
               <p>
-                Stress, tensions, fatigue musculaire ? Le cupping est une
-                méthode appréciée pour détendre le corps, favoriser la
-                récupération et améliorer le bien-être général.
-              </p>
+         Stress, tensions musculaires, fatigue après l’effort ou sensation de raideur ? Le cupping est une pratique appréciée pour favoriser la détente, aider à relâcher les zones de tension et accompagner la récupération physique. Il peut ainsi s’intégrer dans une démarche de bien-être, notamment après une activité sportive ou lorsque le corps a besoin de retrouver davantage de légèreté et de confort. Inès offre à Geispolsheim, près de Strasbourg, une solution naturelle pour prendre soin de son corps et s’accorder un moment de relaxation.  
+           </p>
             </div>
           </div>
+
+
+          
         </div>
       </section>
 
@@ -286,31 +312,45 @@ export default function CuppingPage() {
         </div>
       </section>
 
-      {/* DANS QUELS CAS */}
-      <section className="bg-[#eee3d3] px-6 py-20 md:px-12 md:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <p className="mb-3 font-montserrat text-sm font-semibold uppercase tracking-[0.15em] text-[#9a725c]">
-                Pour quels besoins ?
-              </p>
+  {/* DANS QUELS CAS */}
+<section className="bg-[#eee3d3] px-6 py-20 md:px-12 md:py-24">
+  <div className="mx-auto max-w-6xl">
+    <div className="grid gap-12 md:grid-cols-2 md:items-center">
 
-              <h2 className="font-playfair text-3xl font-bold md:text-4xl">
-                Dans quels cas le cupping peut-il vous aider ?
-              </h2>
-            </div>
+      {/* TEXTE */}
+      <div className="flex h-full flex-col justify-center">
+        <p className="mb-3 font-montserrat text-sm font-semibold uppercase tracking-[0.15em] text-[#9a725c]">
+          Pour quels besoins ?
+        </p>
 
-            <ul className="space-y-4 font-montserrat text-[#6d4c3d]">
-              {situations.map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#b2916e]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+        <h2 className="font-playfair text-3xl font-bold leading-tight md:text-4xl">
+          Dans quels cas le cupping peut-il vous aider ?
+        </h2>
+
+        <ul className="mt-8 space-y-4 font-montserrat text-[#6d4c3d]">
+          {situations.map((item) => (
+            <li key={item} className="flex gap-3">
+              <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#b2916e]" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* IMAGE */}
+      <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl">
+        <Image
+          src="/precaution.jpg"
+          alt="Séance de cupping à Geispolsheim près de Strasbourg"
+          width={900}
+          height={650}
+          className="h-auto w-full object-cover"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* POUR QUI */}
       <section className="px-6 py-20 md:px-12 md:py-24">
@@ -321,16 +361,16 @@ export default function CuppingPage() {
             </h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {publicCible.map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl bg-[#dcc6a3] p-6 font-montserrat text-sm leading-7 text-[#654537]"
-              >
-                {item}
-              </div>
-            ))}
-          </div>
+         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+  {publicCible.map((item) => (
+    <div
+      key={item}
+      className="flex min-h-[130px] items-center justify-center rounded-2xl bg-[#dcc6a3] p-6 text-center font-montserrat text-sm leading-7 text-[#654537]"
+    >
+      {item}
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
@@ -434,39 +474,49 @@ export default function CuppingPage() {
         </div>
       </section>
 
-      {/* CONTRE-INDICATIONS */}
-      <section className="px-6 py-20 md:px-12 md:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 md:grid-cols-2">
-            <div>
-              <p className="mb-3 font-montserrat text-sm font-semibold uppercase tracking-[0.15em] text-[#9a725c]">
-                Précautions
-              </p>
+{/* CONTRE-INDICATIONS */}
+<section className="px-6 py-20 md:px-12 md:py-24">
+  <div className="mx-auto max-w-6xl">
+    <div className="grid gap-12 md:grid-cols-2 md:items-stretch">
 
-              <h2 className="font-playfair text-3xl font-bold md:text-4xl">
-                Contre-indications
-              </h2>
+      {/* GAUCHE : TEXTE + IMAGE */}
+      <div className="flex flex-col">
 
-              <p className="mt-5 font-montserrat text-sm leading-7 text-[#76564a]">
-                Certaines situations nécessitent de ne pas pratiquer le
-                cupping. En cas de doute ou de pathologie particulière,
-                demandez conseil à votre professionnel de santé.
-              </p>
-            </div>
+        <p className="mb-3 font-montserrat text-sm font-semibold uppercase tracking-[0.15em] text-[#9a725c]">
+          Précautions
+        </p>
 
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {contraindications.map((item) => (
-                <li
-                  key={item}
-                  className="rounded-xl border border-[#e1d5c3] bg-[#faf7f1] px-5 py-4 font-montserrat text-sm text-[#6d4c3d]"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+        <h2 className="font-playfair text-3xl font-bold leading-tight md:text-4xl">
+          Contre-indications
+        </h2>
+
+        <div className="mt-5 flex-1 overflow-hidden rounded-[2rem] shadow-xl">
+          <Image
+            src="/besoin-cupping.jpg"
+            alt="Précautions et contre-indications du cupping"
+            width={900}
+            height={650}
+            className="h-full w-full object-cover"
+          />
         </div>
-      </section>
+
+      </div>
+
+      {/* DROITE : CONTRE-INDICATIONS */}
+      <ul className="grid h-full grid-cols-2 content-center gap-4">
+        {contraindications.map((item) => (
+          <li
+            key={item}
+            className="flex min-h-[55px] items-center rounded-xl border border-[#e1d5c3] bg-[#faf7f1] px-5 py-4 font-montserrat text-sm text-[#6d4c3d]"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  </div>
+</section>
 
       {/* AVANT / APRÈS */}
       <section className="bg-[#dcc6a3] px-6 py-20 md:px-12 md:py-24">
@@ -489,9 +539,9 @@ export default function CuppingPage() {
               </h2>
 
               <p className="mt-5 font-montserrat text-sm leading-7 text-[#76564a]">
-                Vêtements de sport ou confortables pour faciliter l&apos;accès aux
-                zones à traiter : dos, épaules, jambes... Possibilité de rester
-                en sous-vêtements si vous êtes à l&apos;aise. Votre confort est notre
+                Vêtements confortables pour faciliter l&apos;accès aux
+                zones à traiter : dos, jambes... Possibilité de rester
+                en sous-vêtements, votre confort est notre
                 priorité.
               </p>
             </div>
@@ -610,6 +660,48 @@ export default function CuppingPage() {
             </Link>
           </div>
         </div>
+            {/* Footer */}
+    <footer className="bg-[#5C3D2E] text-[#F5EFE6] py-10">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p className="font-serif text-xl mb-2">ID RECOVERY – Inès Debroise</p>
+
+    <p className="text-sm opacity-80">
+      Prestations de bien-être et de récupération sportive non médicales, ne
+      remplaçant pas un suivi en kinésithérapie.
+    </p>
+
+    {/* Liens légaux */}
+    <div className="flex justify-center items-center gap-3 mt-4 text-sm">
+      <a
+        href="/politique-de-confidentialite"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+      >
+        Politique de confidentialité
+      </a>
+
+      <span className="opacity-30">•</span>
+
+      <a
+        href="/mentions-legales"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+      >
+        Mentions légales
+      </a>
+        <span className="opacity-30">•</span>
+
+      <a
+        href="/gestion-cookies"
+        className="opacity-70 hover:opacity-100 transition-opacity"
+      >
+        Gestion des Cookies
+      </a>
+    </div>
+
+    <p className="text-sm mt-4 opacity-60">
+      © {new Date().getFullYear()} ID RECOVERY. Tous droits réservés.
+    </p>
+  </div>
+</footer>
       </section>
     </main>
   );
