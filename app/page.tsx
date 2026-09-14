@@ -40,7 +40,7 @@ export default function HomePage() {
             <div className="w-12 h-12 rounded-full bg-[#D8C3A5] flex items-center justify-center overflow-hidden">
               <Image
                 src="/logo_idrecovery.webp" // ← Remplacez par le chemin de votre logo
-                alt="Logo ID RECOVERY"
+                alt="Logo ID RECOVERY d'Inès Debroise Massage"
                 width={48}
                 height={48}
                 className="object-cover"
