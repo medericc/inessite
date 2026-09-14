@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Massage sportif à Geispolsheim près de Strasbourg",
   description:
-    "Découvrez le massage suédois sportif à Geispolsheim près de Strasbourg : bienfaits, déroulement d'une séance, récupération, détente musculaire et questions fréquentes.",
+    "Découvrez le massage suédois sportif à Geispolsheim près de Strasbourg avec Inès Debroise : bienfaits, déroulement d'une séance, récupération, détente musculaire et questions fréquentes.",
   alternates: {
     canonical: "/massage-geispolsheim",
   },

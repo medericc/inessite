@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cupping à Geispolsheim près de Strasbourg",
   description:
-    "Découvrez le cupping à Geispolsheim près de Strasbourg : bienfaits, déroulement d'une séance, techniques, précautions et réponses aux questions fréquentes.",
+    "Découvrez le cupping à Geispolsheim près de Strasbourg avec Inès Debroise : bienfaits, déroulement d'une séance, techniques, précautions et réponses aux questions fréquentes.",
   alternates: {
     canonical: "/cupping-geispolsheim",
   },
