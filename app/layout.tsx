@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     template: '%s | ID RECOVERY',
   },
 
-  description:
-    'ID RECOVERY – Inès Debroise, praticienne en cupping therapy et massage sportif à Geispolsheim, près de Strasbourg. Cupping, massage suédois sportif et récupération physique.',
+description:
+  'ID RECOVERY – Massage sportif, massage bien-être et cupping à Geispolsheim près de Strasbourg. Inès Debroise vous accompagne pour la détente, le relâchement musculaire et la récupération sportive.',
 
 
 
@@ -111,6 +111,10 @@ logo: "https://exemple-topique-ines.vercel.app/logo_idrecovery.webp",
   },
 ],
   priceRange: '€€',
+sameAs: [
+  'https://www.instagram.com/idrecovery__/',
+],
+
 };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

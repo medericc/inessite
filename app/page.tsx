@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link";
 import ReviewModal from './components/ReviewModal';
 import GoogleMapConsent from "./components/GoogleMapConsent";
 type Review = {
@@ -153,7 +154,7 @@ export default function HomePage() {
       {/* Section Prestations */}
       <section id="prestations" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Ses Prestations</h2>
+          <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Massages et soins bien-être</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Cupping */}
             <article  className="bg-[#F5EFE6] rounded-3xl p-8 shadow-lg hover:shadow-xl transition">
@@ -212,7 +213,7 @@ export default function HomePage() {
       {/* Section Cupping détaillée */}
       <section id="cupping" className="bg-[#F5EFE6] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Le Cupping / Hijama en détail</h2>
+          <h2 className="font-serif text-4xl font-bold text-center text-[#5C3D2E] mb-12">Le Cupping / Hijama à Geispolsheim</h2>
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="font-serif text-2xl font-semibold text-[#5C3D2E] mb-4">Bienfaits</h3>
@@ -267,6 +268,15 @@ export default function HomePage() {
                   Le cupping est une invitation à ralentir, relâcher les tensions du quotidien et prendre soin de soi.
                 </p>
               </div>
+              <div className="mt-10 flex justify-end">
+  <Link
+    href="/cupping-geispolsheim"
+    className="inline-flex items-center gap-2 rounded-full bg-[#dcc6a3] px-6 py-3 font-montserrat text-sm font-semibold text-[#5b3b2e] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#cdb58e] hover:shadow-md"
+  >
+    Découvrir le cupping
+    <span aria-hidden="true">→</span>
+  </Link>
+</div>
             </div>
           </div>
         </div>
@@ -327,6 +337,15 @@ export default function HomePage() {
                   Le massage sportif n&apos;est pas réservé aux sportifs professionnels : toute personne souhaitant travailler ses tensions musculaires peut en bénéficier.
                 </p>
               </div>
+              <div className="mt-10 flex justify-end">
+  <Link
+    href="/massage-geispolsheim"
+    className="inline-flex items-center gap-2 rounded-full bg-[#dcc6a3] px-6 py-3 font-montserrat text-sm font-semibold text-[#5b3b2e] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#cdb58e] hover:shadow-md"
+  >
+    Découvrir le massage sportif
+    <span aria-hidden="true">→</span>
+  </Link>
+</div>
             </div>
           </div>
         </div>
@@ -446,7 +465,7 @@ export default function HomePage() {
       <section id="contact" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-serif text-4xl font-bold text-[#5C3D2E] mb-6">Où me trouver ?</h2>
+            <h2 className="font-serif text-4xl font-bold text-[#5C3D2E] mb-6">Où faire un massage à Strasbourg ?</h2>
             <p className="text-[#684735] mb-4">
               📍 <strong>Geispolsheim, 67118</strong> (Bas-Rhin, près de Strasbourg)
             </p>

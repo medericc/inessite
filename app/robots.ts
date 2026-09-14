@@ -1,11 +1,11 @@
-import type { MetadataRoute } from 'next';
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
-      userAgent: '*',
-      allow: '/',
+      userAgent: "*",
+      allow: "/",
     },
-    sitemap: 'https://www.idrecovery.fr/sitemap.xml',
+    sitemap: "https://www.idrecovery.fr/sitemap.xml",
   };
 }
