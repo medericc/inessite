@@ -128,7 +128,7 @@ export default function MassagePage() {
       </p>
 
       <h1 className="font-playfair text-4xl font-bold leading-tight md:text-6xl">
-        Massage sportif à Geispolsheim
+        Masseuse sportive à Geispolsheim
         <span className="block text-[#8b604b]">
           près de Strasbourg
         </span>
