@@ -232,7 +232,7 @@ export default function CuppingPage() {
       <div className="relative h-[420px] w-full overflow-hidden rounded-[3rem] shadow-2xl md:h-[500px]">
         <Image
           src="/ines-debroise-portrait.webp"
-          alt="Inès Debroise, praticienne en massage sportif à Geispolsheim près de Strasbourg"
+          alt="Inès Debroise, femme praticienne en massage sportif à Geispolsheim près de Strasbourg"
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 50vw"

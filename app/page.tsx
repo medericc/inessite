@@ -40,7 +40,7 @@ export default function HomePage() {
             <div className="w-12 h-12 rounded-full bg-[#D8C3A5] flex items-center justify-center overflow-hidden">
               <Image
                 src="/logo_idrecovery.webp" // ← Remplacez par le chemin de votre logo
-                alt="Logo ID RECOVERY d'Inès Debroise Massage"
+                alt="Logo ID RECOVERY d'Inès Debroise Masseuse"
                 width={48}
                 height={48}
                 className="object-cover"
@@ -103,7 +103,7 @@ export default function HomePage() {
   <div className="relative w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
     <Image
       src="/ines-debroise-portrait.webp"
-      alt="Inès Debroise, praticienne en cupping therapy et massage sportif à Geispolsheim"
+      alt="Inès Debroise, femme praticienne en cupping therapy et massage sportif à Geispolsheim"
       fill
       priority
       sizes="(max-width: 1024px) 100vw, 50vw"
