@@ -44,7 +44,7 @@ export default function PolitiqueConfidentialitePage() {
               <p className="mt-2">
                 E-mail :{" "}
                 <a
-                  href="mailto:inesdbrs@gmail.com"
+                  href="mailto:tairevate@gmail.com"
                   className="underline hover:text-[#8C6D58]"
                 >
                   inesdbrs@gmail.com
@@ -324,7 +324,7 @@ export default function PolitiqueConfidentialitePage() {
               <p className="mt-2">
                 E-mail :{" "}
                 <a
-                  href="mailto:inesdbrs@gmail.com"
+                  href="mailto:tairevate@gmail.com"
                   className="underline hover:text-[#8C6D58]"
                 >
                   inesdbrs@gmail.com

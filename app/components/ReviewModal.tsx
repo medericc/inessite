@@ -15,35 +15,34 @@ export default function ReviewModal() {
     setFormStatus("idle");
   };
 
-  const handleSubmitReview = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
-    setFormStatus("submitting");
+const handleSubmitReview = async (
+  e: Parameters<NonNullable<React.ComponentProps<"form">["onSubmit"]>>[0]
+) => {
+  e.preventDefault();
+  setFormStatus("submitting");
+  const form = e.currentTarget;
+  const formData = new FormData(form);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+  // Remplacez l'URL par votre endpoint Formspree
+  try {
+    const res = await fetch("https://formspree.io/f/xppzvnlv", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
 
-    // Remplacez l'URL par votre endpoint Formspree
-    try {
-      const res = await fetch("https://formspree.io/f/VOTRE_ID", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-
-      if (res.ok) {
-        setFormStatus("success");
-        form.reset();
-      } else {
-        setFormStatus("error");
-      }
-    } catch {
+    if (res.ok) {
+      setFormStatus("success");
+      form.reset();
+    } else {
       setFormStatus("error");
     }
-  };
+  } catch {
+    setFormStatus("error");
+  }
+};
 
   return (
     <>

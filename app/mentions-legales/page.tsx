@@ -46,7 +46,7 @@ export default function MentionsLegalesPage() {
               <p>
                 E-mail :{" "}
                 <a
-                  href="mailto:inesdbrs@gmail.com"
+                  href="mailto:tairevate@gmail.com"
                   className="underline hover:text-[#8C6D58]"
                 >
                   inesdbrs@gmail.com
