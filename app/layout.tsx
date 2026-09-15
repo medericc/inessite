@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 
 description:
-  'ID RECOVERY – Massage sportif, massage bien-être et cupping à Geispolsheim près de Strasbourg. Inès Debroise vous accompagne pour la détente, le relâchement musculaire et la récupération sportive.',
+  'Masseuse à Geispolsheim, Inès Debroise propose massage sportif, massage bien-être et cupping pour la détente et la récupération près de Strasbourg.',
 
 
 
