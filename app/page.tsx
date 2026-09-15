@@ -491,7 +491,7 @@ export default function HomePage() {
                 Instagram
               </a>
               <a
-                href="mailto:tairevate@gmail.com"
+                href="mailto:inesdbrs@gmail.com"
                 className="border-2 border-[#5C3D2E] text-[#5C3D2E] px-6 py-3 rounded-full hover:bg-[#5C3D2E] hover:text-[#F5EFE6] transition"
               >
                 Email
