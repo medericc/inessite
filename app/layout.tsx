@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 
 description:
-  'Masseuse à Geispolsheim, Inès Debroise propose massage sportif, massage bien-être et cupping pour la détente et la récupération près de Strasbourg.',
+  'Masseuse à Geispolsheim, Inès Debroise propose massage sportif, cupping, hijama, massage bien-être et cupping pour la détente et la récupération près de Strasbourg.',
 
 
 
