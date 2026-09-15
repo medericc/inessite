@@ -340,7 +340,7 @@ export default function CuppingPage() {
       {/* IMAGE */}
       <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl">
         <Image
-          src="/precaution.jpg"
+          src="/precaution.webp"
           alt="Séance de cupping à Geispolsheim près de Strasbourg"
           width={900}
           height={650}
@@ -492,7 +492,7 @@ export default function CuppingPage() {
 
         <div className="mt-5 flex-1 overflow-hidden rounded-[2rem] shadow-xl">
           <Image
-            src="/besoin-cupping.jpg"
+            src="/besoin-cupping.webp"
             alt="Précautions et contre-indications du cupping"
             width={900}
             height={650}
@@ -660,7 +660,10 @@ export default function CuppingPage() {
             </Link>
           </div>
         </div>
-            {/* Footer */}
+   
+      </section>
+
+               {/* Footer */}
     <footer className="bg-[#5C3D2E] text-[#F5EFE6] py-10">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <p className="font-serif text-xl mb-2">ID RECOVERY – Inès Debroise</p>
@@ -702,7 +705,6 @@ export default function CuppingPage() {
     </p>
   </div>
 </footer>
-      </section>
     </main>
   );
 }

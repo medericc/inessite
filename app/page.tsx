@@ -478,7 +478,7 @@ export default function HomePage() {
             <div className="bg-[#F5EFE6] border border-[#8C6D58] rounded-xl p-6 mt-8">
               <p className="font-semibold text-[#5C3D2E]">🎉 Offre de lancement</p>
               <p className="text-[#684735] mt-2">
-              Réservation en message privé (par Instagram ou par mail).
+           15% sur toutes les prestations du 5 septembre au 5 octobre.
               </p>
             </div>
             <div className="mt-8 flex gap-4">

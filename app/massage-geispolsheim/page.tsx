@@ -224,9 +224,9 @@ export default function MassagePage() {
           Dans quels cas le massage peut-il vous aider ?
         </h2>
 
-        <div className="mt-8 w-full overflow-hidden rounded-[2rem] shadow-xl">
+        <div className="mt-7 w-full overflow-hidden rounded-[2rem] shadow-xl">
           <Image
-            src="/massage-besoin.jpg"
+            src="/massage-besoin.webp"
             alt="Massage sportif pour accompagner la récupération musculaire"
             width={900}
             height={650}
@@ -246,7 +246,7 @@ export default function MassagePage() {
           ))}
         </ul>
 
-        <p className="mt-7 font-montserrat text-sm italic leading-7 text-[#987967]">
+        <p className="mt-8 *:font-montserrat text-sm italic leading-7 text-[#987967]">
           Il ne remplace cependant pas un diagnostic ou une prise en
           charge médicale en cas de blessure.
         </p>

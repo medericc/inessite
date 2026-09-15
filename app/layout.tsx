@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Playfair_Display, Montserrat } from 'next/font/google';
 import CookieManager from "./components/CookieManager";
+import { GoogleTagManager } from "@next/third-parties/google";
+
 // Polices
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -117,20 +119,36 @@ sameAs: [
 
 };
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return (
-    
-    <html
-      lang="fr"
-      className={`${playfair.variable} ${montserrat.variable} h-full antialiased`}
-   
-   >
-    <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(jsonLd),
-  }}
-/>
-      <body className="min-h-full flex flex-col">{children} <CookieManager /></body>
-    </html>
-  );
+return (
+  <html
+    lang="fr"
+    className={`${playfair.variable} ${montserrat.variable} h-full antialiased`}
+  >
+  
+
+    <body className="min-h-full flex flex-col">
+      {/* Google Tag Manager (noscript) */}
+    <GoogleTagManager gtmId="GTM-TWXM8QLC" />
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-TWXM8QLC"
+    height="0"
+    width="0"
+    style={{ display: "none", visibility: "hidden" }}
+  />
+</noscript>
+
+      {children}
+      <CookieManager />
+
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+    </body>
+  </html>
+);
 }
