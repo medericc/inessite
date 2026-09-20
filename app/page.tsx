@@ -164,9 +164,9 @@ export default function HomePage() {
                 Technique d&apos;aspiration par ventouses pour soulager les douleurs, relâcher les fascias et stimuler la circulation.
               </p>
               <ul className="space-y-3 text-sm">
-                <li className="flex justify-between"><span>Dos (20 min)</span><strong>50 €</strong></li>
-                <li className="flex justify-between"><span>Jambes complètes (40 min)</span><strong>55 €</strong></li>
-                <li className="flex justify-between"><span>Corps entier (45 min)</span><strong>80 €</strong></li>
+                <li className="flex justify-between"><span>Dos (20 min)</span><span className="font-bold">50 €</span></li>
+                <li className="flex justify-between"><span>Jambes complètes (40 min)</span><span className="font-bold">55 €</span></li>
+                <li className="flex justify-between"><span>Corps entier (45 min)</span><span className="font-bold">80 €</span></li>
               </ul>
             </article >
             {/* Massage */}
@@ -177,10 +177,10 @@ export default function HomePage() {
                 Massage profond pour délier les nœuds musculaires, favoriser la récupération et préparer le corps à l&apos;effort.
               </p>
               <ul className="space-y-3 text-sm">
-                <li className="flex justify-between"><span>30 min</span><strong>45 €</strong></li>
-                <li className="flex justify-between"><span>60 min</span><strong>70 €</strong></li>
-                <li className="flex justify-between"><span>Dos (30 min)</span><strong>45 €</strong></li>
-                <li className="flex justify-between"><span>Jambes (40 min)</span><strong>50 €</strong></li>
+                <li className="flex justify-between"><span>30 min</span><span className="font-bold">45 €</span></li>
+                <li className="flex justify-between"><span>60 min</span><span className="font-bold">70 €</span></li>
+                <li className="flex justify-between"><span>Dos (30 min)</span><span className="font-bold">45 €</span></li>
+                <li className="flex justify-between"><span>Jambes (40 min)</span><span className="font-bold">50 €</span></li>
               </ul>
             </article >
             {/* Formules combinées */}
@@ -191,10 +191,10 @@ export default function HomePage() {
                 Packs signatures associant massage suédois et ventouses pour une expérience complète.
               </p>
               <ul className="space-y-3 text-sm">
-                <li className="flex justify-between"><span>Découverte (50 min)</span><strong>80 €</strong></li>
-                <li className="flex justify-between"><span>Jambes Légères (60 min)</span><strong>80 €</strong></li>
-                <li className="flex justify-between"><span>Signature Bien-être (90 min)</span><strong>120 €</strong></li>
-                <li className="flex justify-between"><span>Soin Personnalisé (60-90 min)</span><strong>80–150 €</strong></li>
+                <li className="flex justify-between"><span>Découverte (50 min)</span><span className="font-bold">80 €</span></li>
+                <li className="flex justify-between"><span>Jambes Légères (60 min)</span><span className="font-bold">80 €</span></li>
+                <li className="flex justify-between"><span>Signature Bien-être (90 min)</span><span className="font-bold">120 €</span></li>
+                <li className="flex justify-between"><span>Soin Personnalisé (60-90 min)</span><span className="font-bold">80–150 €</span></li>
               </ul>
             </article >
           </div>
@@ -454,7 +454,7 @@ export default function HomePage() {
             <details className="bg-white rounded-2xl p-6 shadow">
               <summary  className="font-semibold text-[#5C3D2E] mb-2">Le massage sportif remplace-t-il un kinésithérapeute ou un médecin ?</summary>
               <p className="text-[#684735]">
-                Non. Le massage sportif est une prestation de bien-être et de récupération. Il ne remplace pas un diagnostic ou un traitement médical.
+                Non. Le massage sportif d&apos;une masseuse est une prestation de bien-être et de récupération. Il ne remplace pas un diagnostic ou un traitement médical.
               </p>
             </details>
           </div>
