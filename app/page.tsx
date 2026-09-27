@@ -67,9 +67,9 @@ const reviews: Review[] = ((reviewsData ?? []) as {
                 height={48}
                 className="object-cover"
               />
-            </div>
+            </div>     </a> 
             <span className="font-serif text-2xl font-bold text-[#5C3D2E]">ID RECOVERY</span>
-     </a>     </div>
+    </div>
           <div className="hidden md:flex space-x-8">
             <a href="#prestations" className="hover:text-[#8C6D58] transition">Prestations</a>
             <a href="#cupping" className="hover:text-[#8C6D58] transition">Cupping</a>
