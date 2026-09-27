@@ -2,30 +2,52 @@ import Image from 'next/image';
 import Link from "next/link";
 import ReviewModal from './components/ReviewModal';
 import GoogleMapConsent from "./components/GoogleMapConsent";
+import { createSupabaseServerClient } from "../lib/supabase/server";
+
 type Review = {
+  id: number;
   author: string;
-  rating: number; // 1 à 5
+  rating: number;
   text: string;
-  date: string; // format "YYYY-MM-DD"
+  date: string;
 };
-// Exemple d'avis (vide pour l'instant – remplissez-le pour afficher la section)
-const reviews: Review[] = [
-  {
-    author: "Axel",
-    rating: 5,
-    text: "Une superbe expérience ! Très professionnelle et appliquée. Je recommande vivement !",
-    date: "2026-09-27",
-  },
-  // {
-  //   author: "Thomas R.",
-  //   rating: 4,
-  //   text: "Très bon massage sportif, les tensions dans le dos ont disparu. Je recommande vivement.",
-  //   date: "2026-09-20",
-  // },
-];
 
-export default function HomePage() {
+// const reviews: Review[] = [
+//   {
+//     author: "Axel",
+//     rating: 5,
+//     text: "Une superbe expérience ! Très professionnelle et appliquée. Je recommande vivement !",
+//     date: "2026-09-27",
+//   },
+ 
+// ];
 
+export default async function HomePage() {
+const supabase = await createSupabaseServerClient();
+
+const { data: reviewsData, error: reviewsError } = await supabase
+  .from("reviews")
+  .select("id, author, rating, text, created_at")
+  .eq("approved", true)
+  .order("created_at", { ascending: false });
+
+if (reviewsError) {
+  console.error("Erreur récupération avis :", reviewsError);
+}
+
+const reviews: Review[] = ((reviewsData ?? []) as {
+  id: number;
+  author: string;
+  rating: number;
+  text: string;
+  created_at: string;
+}[]).map((review) => ({
+  id: review.id,
+  author: review.author,
+  rating: review.rating,
+  text: review.text,
+  date: review.created_at,
+}));
    
   return (
     <main
@@ -360,9 +382,9 @@ export default function HomePage() {
       </h2>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {reviews.map((review, index) => (
+        {reviews.map((review) => (
           <div
-            key={index}
+            key={review.id}
             className="bg-[#FFFDF9] rounded-2xl p-6 shadow-md hover:shadow-xl transition flex flex-col"
           >
             <div className="flex items-center mb-4">

@@ -1,47 +1,111 @@
 "use client";
 
 import { useState } from "react";
+import { createClient } from "../../lib/supabase/client";
+import { Turnstile } from "@marsidev/react-turnstile";
 
 export default function ReviewModal() {
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+
   const [formStatus, setFormStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
-const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+const [turnstileToken, setTurnstileToken] = useState("");
+const [turnstileKey, setTurnstileKey] = useState(0);
   const openReviewModal = () => setIsReviewModalOpen(true);
 
 const closeReviewModal = () => {
   setIsReviewModalOpen(false);
   setFormStatus("idle");
   setSelectedRating(null);
+  setTurnstileToken("");
+  setTurnstileKey((key) => key + 1);
 };
 
 const handleSubmitReview = async (
-  e: Parameters<NonNullable<React.ComponentProps<"form">["onSubmit"]>>[0]
+  e: React.FormEvent<HTMLFormElement>
 ) => {
   e.preventDefault();
+
   setFormStatus("submitting");
+
   const form = e.currentTarget;
   const formData = new FormData(form);
 
-  // Remplacez l'URL par votre endpoint Formspree
+  const author = String(
+    formData.get("name") ?? ""
+  ).trim();
+
+  const rating = Number(
+    formData.get("rating")
+  );
+
+  const text = String(
+    formData.get("message") ?? ""
+  ).trim();
+
+  const publicationConsent =
+    formData.get("publication_consent") === "yes";
+
+  const website = String(
+    formData.get("website") ?? ""
+  );
+
+  if (
+    !author ||
+    !text ||
+    !rating ||
+    !publicationConsent ||
+    !turnstileToken
+  ) {
+    setFormStatus("error");
+    return;
+  }
+
   try {
-    const res = await fetch("https://formspree.io/f/xppzvnlv", {
+    const response = await fetch("/api/reviews", {
       method: "POST",
-      body: formData,
       headers: {
-        Accept: "application/json",
+        "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        author,
+        rating,
+        text,
+        publicationConsent,
+        turnstileToken,
+        website,
+      }),
     });
 
-    if (res.ok) {
-      setFormStatus("success");
-      form.reset();
-    } else {
+    const result = await response.json();
+
+    // Token Turnstile = usage unique
+    setTurnstileToken("");
+    setTurnstileKey((key) => key + 1);
+
+    if (!response.ok || !result.success) {
+      console.error(
+        "Erreur envoi avis :",
+        result.error
+      );
+
       setFormStatus("error");
+      return;
     }
-  } catch {
+
+    setFormStatus("success");
+
+    form.reset();
+    setSelectedRating(null);
+  } catch (error) {
+    console.error(
+      "Erreur envoi avis :",
+      error
+    );
+
     setFormStatus("error");
   }
 };
@@ -96,7 +160,10 @@ const handleSubmitReview = async (
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmitReview} className="space-y-4">
+              <form
+                onSubmit={handleSubmitReview}
+                className="space-y-4"
+              >
                 <div>
                   <label
                     htmlFor="review-name"
@@ -122,28 +189,29 @@ const handleSubmitReview = async (
 
                   <div className="flex gap-1">
                     {[1, 2, 3, 4, 5].map((star) => (
-                 <label
-  key={star}
-  className="cursor-pointer"
-  onClick={() => setSelectedRating(star)}
->
-  <input
-    type="radio"
-    name="rating"
-    value={star}
-    required
-    className="sr-only"
-    onChange={() => setSelectedRating(star)}
-  />
+                      <label
+                        key={star}
+                        className="cursor-pointer"
+                        onClick={() => setSelectedRating(star)}
+                      >
+                        <input
+                          type="radio"
+                          name="rating"
+                          value={star}
+                          required
+                          className="sr-only"
+                          onChange={() => setSelectedRating(star)}
+                        />
 
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                       className={`h-8 w-8 transition ${
-  selectedRating !== null && star <= selectedRating
-    ? "text-[#8C6D58]"
-    : "text-[#D8C3A5] hover:text-[#8C6D58]"
-}`}
-  viewBox="0 0 20 20"
+                          className={`h-8 w-8 transition ${
+                            selectedRating !== null &&
+                            star <= selectedRating
+                              ? "text-[#8C6D58]"
+                              : "text-[#D8C3A5] hover:text-[#8C6D58]"
+                          }`}
+                          viewBox="0 0 20 20"
                           fill="currentColor"
                         >
                           <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -169,21 +237,28 @@ const handleSubmitReview = async (
                     className="w-full px-4 py-2 rounded-2xl border border-[#D8C3A5] bg-white focus:outline-none focus:ring-2 focus:ring-[#8C6D58]"
                     placeholder="Partagez votre expérience..."
                   />
+
                   <p className="text-xs text-[#684735]">
-  Les informations renseignées sont utilisées uniquement pour traiter votre avis
-  et, après validation, pour éventuellement le publier sur ce site.
-  Pour en savoir plus sur vos droits et la gestion de vos données, consultez notre{" "}
-  <a
-    href="/politique-confidentialite"
-    className="underline hover:text-[#8C6D58]"
-  >
-    politique de confidentialité
-  </a>.
-</p>
-<p className="text-xs text-[#684735]">
-  Merci de ne pas communiquer d’informations médicales ou de santé dans votre avis.
-</p>
-<div className="flex items-start gap-3 mt-4">
+                    Les informations renseignées sont utilisées uniquement
+                    pour traiter votre avis et, après validation, pour
+                    éventuellement le publier sur ce site. Pour en savoir
+                    plus sur vos droits et la gestion de vos données,
+                    consultez notre{" "}
+                    <a
+                      href="/politique-confidentialite"
+                      className="underline hover:text-[#8C6D58]"
+                    >
+                      politique de confidentialité
+                    </a>
+                    .
+                  </p>
+
+                  <p className="text-xs text-[#684735]">
+                    Merci de ne pas communiquer d’informations médicales ou de
+                    santé dans votre avis.
+                  </p>
+
+             <div className="flex items-start gap-3 mt-4">
   <input
     type="checkbox"
     id="review-consent"
@@ -193,13 +268,41 @@ const handleSubmitReview = async (
     className="mt-1 h-4 w-4 shrink-0 accent-[#5C3D2E] cursor-pointer"
   />
 
+  <input
+    type="text"
+    name="website"
+    tabIndex={-1}
+    autoComplete="off"
+    className="absolute left-[-9999px] h-0 w-0 opacity-0"
+    aria-hidden="true"
+  />
+
   <label
     htmlFor="review-consent"
-    className="text-sm text-[#684735] cursor-pointer"
+    className="text-sm text-[#684735] cursor-pointer mb-5"
   >
     J&apos;accepte que mon avis soit publié sur le site ID RECOVERY.
   </label>
-</div>            </div>
+</div>
+
+<Turnstile
+  key={turnstileKey}
+  siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+  options={{
+    action: "review",
+    theme: "light",
+  }}
+  onSuccess={(token) => {
+    setTurnstileToken(token);
+  }}
+  onExpire={() => {
+    setTurnstileToken("");
+  }}
+  onError={() => {
+    setTurnstileToken("");
+  }}
+/>
+                </div>
 
                 {formStatus === "error" && (
                   <p className="text-red-600 text-sm">
