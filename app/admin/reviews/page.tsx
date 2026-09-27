@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
-
+import DeleteReviewButton from "./DeleteReviewButton";
 import {
   approveReview,
   deleteReview,
@@ -188,14 +188,7 @@ export default async function AdminReviewsPage() {
                         </button>
                       </form>
 
-                      <form action={deleteReview.bind(null, review.id)}>
-                        <button
-                          type="submit"
-                          className="w-full border-2 border-red-400 text-red-600 px-4 py-3 rounded-full hover:bg-red-50 transition"
-                        >
-                          Supprimer
-                        </button>
-                      </form>
+                   <DeleteReviewButton reviewId={review.id} />
                     </div>
                   </div>
                 </article>
@@ -260,14 +253,7 @@ export default async function AdminReviewsPage() {
                         </button>
                       </form>
 
-                      <form action={deleteReview.bind(null, review.id)}>
-                        <button
-                          type="submit"
-                          className="w-full border-2 border-red-400 text-red-600 px-4 py-3 rounded-full hover:bg-red-50 transition"
-                        >
-                          Supprimer
-                        </button>
-                      </form>
+                  <DeleteReviewButton reviewId={review.id} />
                     </div>
                   </div>
                 </article>

@@ -394,7 +394,7 @@ const reviews: Review[] = ((reviewsData ?? []) as {
                     key={i}
                     xmlns="http://www.w3.org/2000/svg"
                     className={`h-5 w-5 ${
-                      i < review.rating ? "fill-current" : "text-[#D8C3A5]"
+                      i < review.rating ? "fill-current" : "fill-[#D8C3A5]"
                     }`}
                     viewBox="0 0 20 20"
                   >
