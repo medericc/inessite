@@ -156,8 +156,7 @@ export default function PolitiqueConfidentialitePage() {
   </h2>
 
   <p>
-    Le formulaire de dépôt d&apos;avis utilise le service Supabase afin
-    d&apos;enregistrer et de gérer les avis transmis par les utilisateurs.
+    Le formulaire de dépôt d&apos;avis utilise le service Supabase afin de fournir certains services nécessaires au fonctionnement du site, notamment l&apos;enregistrement et la gestion des avis ainsi que l&apos;authentification de l&apos;espace d&apos;administration  
   </p>
 
   <p className="mt-4">
