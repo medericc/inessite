@@ -59,7 +59,7 @@ const reviews: Review[] = ((reviewsData ?? []) as {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
           <div className="flex items-center gap-3">
             {/* Logo rond - remplacez src par votre image */}
-            <div className="w-12 h-12 rounded-full bg-[#D8C3A5] flex items-center justify-center overflow-hidden">
+       <a href="/admin" className="flex items-center gap-3" aria-label="Accéder à l'administration" >     <div className="w-12 h-12 rounded-full bg-[#D8C3A5] flex items-center justify-center overflow-hidden">
               <Image
                 src="/logo_idrecovery.webp" // ← Remplacez par le chemin de votre logo
                 alt="Logo ID RECOVERY d'Inès Debroise Masseuse"
@@ -69,7 +69,7 @@ const reviews: Review[] = ((reviewsData ?? []) as {
               />
             </div>
             <span className="font-serif text-2xl font-bold text-[#5C3D2E]">ID RECOVERY</span>
-          </div>
+     </a>     </div>
           <div className="hidden md:flex space-x-8">
             <a href="#prestations" className="hover:text-[#8C6D58] transition">Prestations</a>
             <a href="#cupping" className="hover:text-[#8C6D58] transition">Cupping</a>
