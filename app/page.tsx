@@ -10,12 +10,12 @@ type Review = {
 };
 // Exemple d'avis (vide pour l'instant – remplissez-le pour afficher la section)
 const reviews: Review[] = [
-  // {
-  //   author: "Marie L.",
-  //   rating: 5,
-  //   text: "Séance de cupping incroyable ! Je me sens légère et détendue. Inès est très professionnelle et à l'écoute.",
-  //   date: "2026-09-15",
-  // },
+  {
+    author: "Axel",
+    rating: 5,
+    text: "Une superbe expérience ! Très professionnelle et appliquée. Je recommande vivement !",
+    date: "2026-09-27",
+  },
   // {
   //   author: "Thomas R.",
   //   rating: 4,
