@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "ID Recovery",
     short_name: "IDR",
     description: "ID Recovery",
-    start_url: "/",
+    start_url: "/admin",
     display: "standalone",
     background_color: "#F5EFE6",
     theme_color: "#5C3D2E",
