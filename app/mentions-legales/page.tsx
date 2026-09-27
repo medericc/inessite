@@ -38,9 +38,6 @@ export default function MentionsLegalesPage() {
                 Responsable de la publication : Inès Debroise
               </p>
 
-              <p>
-                Adresse : <strong>À COMPLÉTER</strong>
-              </p>
 
     
               <p>

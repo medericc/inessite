@@ -37,17 +37,14 @@ export default function PolitiqueConfidentialitePage() {
             </p>
 
             <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm">
-              <p>
-                <strong>ID RECOVERY – Inès Debroise</strong>
-              </p>
-
+            
               <p className="mt-2">
                 E-mail :{" "}
                 <a
-                  href="mailto:tairevate@gmail.com"
+                  href="mailto:bleufarfe@gmail.com"
                   className="underline hover:text-[#8C6D58]"
                 >
-                  inesdbrs@gmail.com
+                 bleufarfe@gmail.com
                 </a>
               </p>
 
@@ -152,37 +149,61 @@ export default function PolitiqueConfidentialitePage() {
             </ul>
           </section>
 
-          {/* FORMSPREE */}
-       <section>
+{/* SUPABASE */}
+<section>
   <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-    5. Formspree
+    5. Supabase
   </h2>
 
   <p>
-    Le formulaire de dépôt d&apos;avis utilise le service Formspree afin de
-    transmettre les informations renseignées par l&apos;utilisateur à
-    ID RECOVERY.
+    Le formulaire de dépôt d&apos;avis utilise le service Supabase afin
+    d&apos;enregistrer et de gérer les avis transmis par les utilisateurs.
   </p>
 
   <p className="mt-4">
     Les données renseignées dans le formulaire, notamment le pseudo ou
-    prénom, la note attribuée et le contenu de l&apos;avis, sont transmises
-    à Formspree afin de permettre leur traitement et leur transmission
-    par e-mail à ID RECOVERY.
+    prénom, la note et le contenu de l&apos;avis, sont enregistrées dans
+    la base de données utilisée par ID RECOVERY afin de permettre leur
+    modération et, après validation, leur publication sur le site.
   </p>
 
   <p className="mt-4">
-    Formspree intervient en tant que prestataire technique pour le traitement
-    des données transmises via le formulaire. Les données peuvent être
-    traitées par Formspree conformément à sa politique de confidentialité
-    et aux conditions applicables au service utilisé par ID RECOVERY.
+    Supabase intervient en tant que prestataire technique pour fournir
+    les services de base de données et d&apos;authentification nécessaires
+    au fonctionnement du site. Les données peuvent être traitées par
+    Supabase conformément à sa politique de confidentialité et aux
+    conditions applicables au service utilisé par ID RECOVERY.
+  </p>
+</section>
+
+{/* TURNSTILE */}
+<section>
+  <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
+    6. Cloudflare Turnstile
+  </h2>
+
+  <p>
+    Le formulaire de dépôt d&apos;avis utilise Cloudflare Turnstile afin
+    de contribuer à la protection du site contre les envois automatisés
+    et les abus.
+  </p>
+
+  <p className="mt-4">
+    Lors de l&apos;utilisation du formulaire, certaines informations
+    techniques peuvent être traitées par Cloudflare afin de vérifier
+    qu&apos;une demande n&apos;est pas effectuée par un processus automatisé.
+  </p>
+
+  <p className="mt-4">
+    Ce traitement est effectué conformément à la politique de
+    confidentialité et aux conditions applicables de Cloudflare.
   </p>
 </section>
 
           {/* GOOGLE ANALYTICS */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              6. Google Analytics
+              7. Google Analytics
             </h2>
 
             <p>
@@ -213,7 +234,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* GOOGLE MAPS */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              7. Google Maps
+              8. Google Maps
             </h2>
 
             <p>
@@ -232,7 +253,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* DONNÉES DE SANTÉ */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              8. Informations de santé
+              9. Informations de santé
             </h2>
 
             <p>
@@ -255,7 +276,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* DESTINATAIRES */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              9. Destinataires
+              10. Destinataires
             </h2>
 
             <p>
@@ -270,7 +291,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* DURÉE */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              10. Durée de conservation
+              11. Durée de conservation
             </h2>
 
             <p>
@@ -296,7 +317,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* DROITS */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              11. Vos droits
+              12. Vos droits
             </h2>
 
             <p>
@@ -317,17 +338,15 @@ export default function PolitiqueConfidentialitePage() {
             </p>
 
             <div className="mt-4 bg-white rounded-2xl p-6 shadow-sm">
-              <p>
-                <strong>ID RECOVERY – Inès Debroise</strong>
-              </p>
+    
 
               <p className="mt-2">
                 E-mail :{" "}
                 <a
-                  href="mailto:tairevate@gmail.com"
+                  href="mailto:bleufarfe@gmail.com"
                   className="underline hover:text-[#8C6D58]"
                 >
-                  inesdbrs@gmail.com
+                  bleufarfe@gmail.com
                 </a>
               </p>
             </div>
@@ -342,7 +361,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* SÉCURITÉ */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              12. Sécurité
+              13. Sécurité
             </h2>
 
             <p>
@@ -355,7 +374,7 @@ export default function PolitiqueConfidentialitePage() {
           {/* MISE À JOUR */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              13. Mise à jour
+              14. Mise à jour
             </h2>
 
             <p>
