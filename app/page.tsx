@@ -114,10 +114,9 @@ const reviews: Review[] = ((reviewsData ?? []) as {
             </div>
             {/* Offre de lancement */}
             <div className="mt-8 bg-[#F5EFE6] border border-[#8C6D58] rounded-2xl p-5 inline-block">
-              <p className="font-semibold text-[#5C3D2E]">🎉 Offre de lancement</p>
+              <p className="font-semibold text-[#5C3D2E]">🎉 Déjà plus d’un mois !</p>
               <p className="text-sm text-[#684735] mt-1">
-                Profitez de <strong>-15% sur toutes les prestations</strong> du 5 septembre au 5 octobre 2026.
-                 Réservation en message privé.
+                Cela fait maintenant plus d’un mois que l’aventure <strong>massage</strong> a commencé. N&apos;hésitez pas à réserver via la rubrique contact !
                </p>
             </div>
           </div>
@@ -498,10 +497,9 @@ const reviews: Review[] = ((reviewsData ?? []) as {
               Langues parlées : 🇫🇷 Français & 🇬🇧 Anglais
             </p>
             <div className="bg-[#F5EFE6] border border-[#8C6D58] rounded-xl p-6 mt-8">
-              <p className="font-semibold text-[#5C3D2E]">🎉 Offre de lancement</p>
+              <p className="font-semibold text-[#5C3D2E]">🎉 Déjà plus d’un mois !</p>
               <p className="text-[#684735] mt-2">
-           15% sur toutes les prestations du 5 septembre au 5 octobre.
-              </p>
+         Cela fait maintenant plus d’un mois que l’aventure a commencé.    </p>
             </div>
             <div className="mt-8 flex gap-4">
               <a
