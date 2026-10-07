@@ -92,7 +92,7 @@ const reviews: Review[] = ((reviewsData ?? []) as {
          <div className="relative z-10">
             <p className="text-[#8C6D58] uppercase tracking-widest text-sm mb-4">Bien-être & Récupération</p>
             <h1 className="font-serif text-3xl lg:text-4xl font-bold leading-tight text-[#5C3D2E]">
-              Masseuse à Geispolsheim
+              Masseuse à Geispolsheim{" "}
               <span className="block text-[#8C6D58]">près de Strasbourg</span>
             </h1>
             <p className="mt-6 text-lg text-[#684735] max-w-xl">
