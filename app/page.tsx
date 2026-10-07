@@ -49,11 +49,68 @@ const reviews: Review[] = ((reviewsData ?? []) as {
   date: review.created_at,
 }));
    
+
+
+const serviceSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Massage suédois sportif à Geispolsheim",
+    "description":
+      "Massage suédois sportif à Geispolsheim, près de Strasbourg, proposé par Inès Debroise pour favoriser la détente et la récupération musculaire.",
+    "serviceType": "Massage suédois sportif",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ID RECOVERY – Inès Debroise",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Geispolsheim",
+        "postalCode": "67118",
+        "addressCountry": "FR"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Geispolsheim"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cupping Therapy / Hijama à Geispolsheim",
+    "description":
+      "Séance de cupping therapy à Geispolsheim, près de Strasbourg, proposée par Inès Debroise dans le cadre du bien-être et de la récupération sportive.",
+    "serviceType": "Cupping Therapy / Hijama",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "ID RECOVERY – Inès Debroise",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Geispolsheim",
+        "postalCode": "67118",
+        "addressCountry": "FR"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Geispolsheim"
+    }
+  }
+];
+
+
+
   return (
     <main
       className={` min-h-screen bg-[#D8C3A5] text-[#5C3D2E] font-sans`}
       style={{ fontFamily: 'var(--font-montserrat)' }}
     >
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(serviceSchema),
+  }}
+/>
       {/* Header avec navigation simple */}
       <header className="bg-[#F5EFE6] shadow-md sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
