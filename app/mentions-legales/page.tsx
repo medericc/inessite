@@ -19,8 +19,8 @@ export default function MentionsLegalesPage() {
 
         <div className="space-y-10 text-[#684735] leading-relaxed">
 
-          {/* ÉDITEUR */}
-          <section>
+          ÉDITEUR
+          {/* <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
               1. Éditeur du site
             </h2>
@@ -54,12 +54,12 @@ export default function MentionsLegalesPage() {
                 SIRET : <strong></strong>
               </p>
             </div>
-          </section>
+          </section> */}
 
           {/* ACTIVITÉ */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              2. Activité
+              1. Activité
             </h2>
 
             <p>
@@ -79,7 +79,7 @@ export default function MentionsLegalesPage() {
           {/* HÉBERGEUR */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              3. Hébergement
+              2. Hébergement
             </h2>
 
             <p>
@@ -110,7 +110,7 @@ export default function MentionsLegalesPage() {
           {/* PROPRIÉTÉ INTELLECTUELLE */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              4. Propriété intellectuelle
+              3. Propriété intellectuelle
             </h2>
 
             <p>
@@ -131,7 +131,7 @@ export default function MentionsLegalesPage() {
           {/* RESPONSABILITÉ */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              5. Responsabilité
+              4. Responsabilité
             </h2>
 
             <p>
@@ -151,7 +151,7 @@ export default function MentionsLegalesPage() {
           {/* LIENS */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              6. Liens externes
+              5. Liens externes
             </h2>
 
             <p>
@@ -166,7 +166,7 @@ export default function MentionsLegalesPage() {
           {/* DONNÉES */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              7. Données personnelles
+              6. Données personnelles
             </h2>
 
             <p>
@@ -185,7 +185,7 @@ export default function MentionsLegalesPage() {
           {/* COOKIES */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              8. Cookies et traceurs
+              7. Cookies et traceurs
             </h2>
 
             <p>
@@ -206,7 +206,7 @@ export default function MentionsLegalesPage() {
           {/* MISE À JOUR */}
           <section>
             <h2 className="font-serif text-2xl font-bold text-[#5C3D2E] mb-4">
-              9. Mise à jour
+              8. Mise à jour
             </h2>
 
             <p>
